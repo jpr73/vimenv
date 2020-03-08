@@ -1,0 +1,138 @@
+"-------------------------------------------------------------------------------
+"
+" Filename:     vimrc
+" Description:  VIM/GVIM user setup file. Should be renamed to .vimrc and saved
+"               as in ~/.vimrc. Simlinks can be used.
+"
+" RCS Id:       $Id: vimrc,v 1.2 2010-06-28 16:29:00+02 jpriskin Exp jpriskin $
+"
+" RCS Revision: $Revision: 1.2 $
+"
+"-------------------------------------------------------------------------------
+"
+" TODO: 
+"   - Try taglist.vim script and use it for VHDL/Verilog projects.
+"
+"-------------------------------------------------------------------------------
+
+"----- Show line number and setting to toggle it
+"      when hitting CTRL-N twice.
+set number
+nmap <C-N><C-N> :set invnumber<CR>
+
+"----- Set indentation without hard tabs
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set autoindent
+
+:filetype indent on
+:let g:vhdl_indent_genportmap=0
+:let g:vhdl_indent_rhsassign=1
+
+"----- Delete selected text without yanking
+"nnoremap d "_d
+"vnoremap d "_d
+
+"----- Replace currently selected text with default register
+"      without yanking it
+"
+"      note: "_ is the "blackhole register", according to :help "_
+"vnoremap p "_dP
+
+"----- Colors
+set t_Co=256
+"colorscheme lucius
+
+"----- GUI setup
+if has('gui_running')
+  "colorscheme darkblue
+  set lines=68 columns=100
+  if has("win32")
+    set guifont=Lucida_Console:h9:cDEFAULT
+  else
+    set guifont=LucidaTypewriter\ 12
+  endif
+
+"----- CLI setup
+else
+  set mouse=a
+  set ttymouse=xterm2
+endif
+
+"--- Status line
+set showmode
+set showcmd
+set ruler
+
+"----- Search setup
+set incsearch
+set ignorecase
+
+"----- Normal mode support
+"      \v edit $MYVIMRC
+"      \s source Current buffer TODO: Source only when &filetype==vim
+map <Leader>v :n $MYVIMRC<CR>
+nmap <Leader>s :source %<CR>
+
+" CTRL-` cause show buffers in normal mode
+nmap <TAB> :ls<CR>
+
+"--- Insert mode keymap
+imap <C-S> <C-O>:write<CR>
+
+"----- Set wildmenu for options
+set wildmenu
+
+"----- Setting completion for CTRL-N and the keywords dictionary
+set complete=.  "this file
+set complete+=w "other windows
+set complete+=k "dictionary
+set complete+=t "tags
+
+"Function to set the dictionary for a specific language
+function! Set_dict()
+  if &filetype=="vhdl"
+    setlocal dictionary=~/.vim/my_vimscripts/vhdl_keywords
+
+  elseif &filetype=="verilog"
+    setlocal dictionary=~/.vim/my_vimscripts/verilog_keywords
+
+  else
+    setlocal dictionary=
+  endif
+endfunction
+
+autocmd Filetype * :call Set_dict()
+
+"----- Syntax
+syntax on
+
+syntax match patt_abc "abc"
+highlight patt_abc guibg=yellow
+
+"--- Additional syntax highlight 
+" TODO: The highlight for tabs and trailing white space does not work for comments,
+" because the comment pattern takes more chars than tab. See :h syn-arguments
+function! Usr_Highlight ()
+  syntax match tabs "\t\+"
+  highlight tabs guibg=#202020 ctermbg=darkgray
+
+  syntax match trailing_space " \+$"
+  highlight trailing_space guibg=#202020 ctermbg=darkgray
+endfunction
+
+"autocmd Syntax *.vhd,*.v,*.p[lm],*.vim,.vimrc,*.log :call Usr_Highlight()
+"TODO: Fix this for various file types only
+autocmd Syntax * :call Usr_Highlight()
+
+"--- Make taglist.vim working
+filetype on
+nnoremap <silent> <F8> :TlistToggle<CR>
+let g:tlist_vhdl_settings   = 'vhdl;d:package declarations;b:package bodies;e:entities;a:architecture specifications;t:type declarations;p:processes;f:functions;r:procedures;c:constant declaration'
+
+"--- Diff the file since it was loaded, i.e. track changes of the file as
+"--- edited. Copied from VIM help ':help vimdiff'
+" command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_
+" 	\ | diffthis | wincmd p | diffthis
+"------------------------------------------------------------------------------
