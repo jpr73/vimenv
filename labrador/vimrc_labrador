@@ -93,10 +93,10 @@ set complete+=t "tags
 "Function to set the dictionary for a specific language
 function! Set_dict()
   if &filetype=="vhdl"
-    setlocal dictionary=~/.vim/my_vimscripts/vhdl_keywords
+    setlocal dictionary=~/vimenv/labrador/vhdl_keywords
 
   elseif &filetype=="verilog"
-    setlocal dictionary=~/.vim/my_vimscripts/verilog_keywords
+    setlocal dictionary=~/vimenv/labrador/verilog_keywords
 
   else
     setlocal dictionary=

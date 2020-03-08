@@ -3,8 +3,6 @@ Started at 27. Feb 2020.
 
 TODO:
 =====
-* Pull the vimenv from GitHub and add ~/vim/labrador_oldies, vhdl_keywords, verilog_keywords
-
 * Clean-up ~/.vim/my_vimscripts/vimrc and add it to /vimenv
 
 * Check this for insiparation:
