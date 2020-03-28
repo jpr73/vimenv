@@ -4,32 +4,25 @@
 " Description:  VIM/GVIM user setup file. Should be renamed to .vimrc and saved
 "               as in ~/.vimrc. Simlinks can be used.
 "
-" RCS Id:       $Id: vimrc,v 1.2 2010-06-28 16:29:00+02 jpriskin Exp jpriskin $
-"
-" RCS Revision: $Revision: 1.2 $
-"
-"-------------------------------------------------------------------------------
-"
-" TODO: 
-"   - Try taglist.vim script and use it for VHDL/Verilog projects.
-"
 "-------------------------------------------------------------------------------
 
 "----- Show line number and setting to toggle it
 "      when hitting CTRL-N twice.
 set number
-nmap <C-N><C-N> :set invnumber<CR>
+nmap <c-n><c-n> :set number!<CR>
 
-"----- Set indentation without hard tabs
+"----- Set Tab is replaced by space.
 set expandtab
-set shiftwidth=2
+set nosmarttab
 set softtabstop=2
+set shiftwidth=2
+
+"----- Set indentation 
 set autoindent
+set smartindent
+filetype indent on
 
-:filetype indent on
-:let g:vhdl_indent_genportmap=0
-:let g:vhdl_indent_rhsassign=1
-
+"TODO: Tu pokracuj
 "----- Delete selected text without yanking
 "nnoremap d "_d
 "vnoremap d "_d

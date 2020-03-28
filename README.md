@@ -3,9 +3,15 @@ Started at 27. Feb 2020.
 
 TODO:
 =====
-* Clean-up ~/.vim/my_vimscripts/vimrc and add it to /vimenv
+* Clean-up ./labrador/vimrc_labrador
 
-* Check this for insiparation:
+References:
+===========
+* VIM Scripting:
+  <https://learnvimscriptthehardway.stevelosh.com>
+  <https://devhints.io/vimscript>
+
+* Check this for inspiration:
     <https://github.com/amix/vimrc>
 
 Scripts used at Labrador:
