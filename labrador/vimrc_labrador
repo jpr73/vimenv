@@ -22,33 +22,23 @@ set autoindent
 set smartindent
 filetype indent on
 
-"TODO: Tu pokracuj
-"----- Delete selected text without yanking
-"nnoremap d "_d
-"vnoremap d "_d
-
-"----- Replace currently selected text with default register
-"      without yanking it
-"
-"      note: "_ is the "blackhole register", according to :help "_
-"vnoremap p "_dP
-
 "----- Colors
-set t_Co=256
-"colorscheme lucius
+" Tried at several modern terminals and t_Co was set to 256.
+" In case of need, uncomment.
+"set t_Co=256
+colorscheme darkblue
 
-"----- GUI setup
 if has('gui_running')
-  "colorscheme darkblue
-  set lines=68 columns=100
+  "----- GUI setup
+  colorscheme desert
+  set lines=43 columns=100
   if has("win32")
     set guifont=Lucida_Console:h9:cDEFAULT
-  else
-    set guifont=LucidaTypewriter\ 12
   endif
-
-"----- CLI setup
 else
+
+  "----- CLI setup
+"TODO: Tu pokracuj
   set mouse=a
   set ttymouse=xterm2
 endif
