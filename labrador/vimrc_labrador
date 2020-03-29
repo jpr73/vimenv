@@ -11,12 +11,6 @@
 set number
 nmap <c-n><c-n> :set number!<CR>
 
-"----- Set Tab is replaced by space.
-set expandtab
-set nosmarttab
-set softtabstop=2
-set shiftwidth=2
-
 "----- Set indentation 
 set autoindent
 set smartindent
@@ -61,24 +55,39 @@ set complete+=w "other windows
 set complete+=k "dictionary
 set complete+=t "tags
 
-"Function to set the dictionary for a specific language
-function Set_dict()
+"----- Filetype specific options
+" Sets Tab length because of Python
+" Sets dictionaries
+"
+"----- Function to set Tab to be replaced by spaces of given length
+function Set_tab(tab_len)
+  set expandtab
+  set nosmarttab
+  execute "set softtabstop=".a:tab_len
+  execute "set shiftwidth=".a:tab_len
+endfunction
+
+function Set_filetype()
   if &filetype=="vhdl"
+    call Set_tab(2)
     setlocal dictionary=~/vimenv/labrador/vhdl_keywords
 
   elseif &filetype=="verilog"
+    call Set_tab(2)
     setlocal dictionary=~/vimenv/labrador/verilog_keywords
 
   elseif &filetype=="python"
+    call Set_tab(4)
     setlocal dictionary=~/vimenv/labrador/python_keywords,
                        \~/vimenv/labrador/python_exceptions
 
   else
+    call Set_tab(2)
     setlocal dictionary=""
   endif
 endfunction
 
-autocmd Filetype * :call Set_dict()
+autocmd Filetype * :call Set_filetype()
 
 "----- Syntax
 syntax on
