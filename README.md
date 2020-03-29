@@ -10,6 +10,7 @@ References:
 * VIM Scripting:
   <https://learnvimscriptthehardway.stevelosh.com>
   <https://devhints.io/vimscript>
+  <https://developer.ibm.com/articles/l-vim-script-1/>
 
 * Check this for inspiration:
     <https://github.com/amix/vimrc>

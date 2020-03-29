@@ -52,7 +52,6 @@ set ignorecase
 " TAB to show buffers in normal mode
 nmap <TAB> :ls<CR>
 
-"TODO: Tu pokracuj
 "----- Set wildmenu for options
 set wildmenu
 
@@ -63,15 +62,19 @@ set complete+=k "dictionary
 set complete+=t "tags
 
 "Function to set the dictionary for a specific language
-function! Set_dict()
+function Set_dict()
   if &filetype=="vhdl"
     setlocal dictionary=~/vimenv/labrador/vhdl_keywords
 
   elseif &filetype=="verilog"
     setlocal dictionary=~/vimenv/labrador/verilog_keywords
 
+  elseif &filetype=="python"
+    setlocal dictionary=~/vimenv/labrador/python_keywords,
+                       \~/vimenv/labrador/python_exceptions
+
   else
-    setlocal dictionary=
+    setlocal dictionary=""
   endif
 endfunction
 
@@ -80,6 +83,7 @@ autocmd Filetype * :call Set_dict()
 "----- Syntax
 syntax on
 
+"TODO: Tu pokracuj
 syntax match patt_abc "abc"
 highlight patt_abc guibg=yellow
 
