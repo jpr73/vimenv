@@ -41,10 +41,8 @@ else
   set mouse=a
 endif
 
-"TODO: Tu pokracuj
 "--- Status line
 set showmode
-set showcmd
 set ruler
 
 "----- Search setup
@@ -54,9 +52,7 @@ set ignorecase
 " TAB to show buffers in normal mode
 nmap <TAB> :ls<CR>
 
-"--- Insert mode keymap
-imap <C-S> <C-O>:write<CR>
-
+"TODO: Tu pokracuj
 "----- Set wildmenu for options
 set wildmenu
 
