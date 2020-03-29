@@ -38,11 +38,10 @@ if has('gui_running')
 else
 
   "----- CLI setup
-"TODO: Tu pokracuj
   set mouse=a
-  set ttymouse=xterm2
 endif
 
+"TODO: Tu pokracuj
 "--- Status line
 set showmode
 set showcmd
@@ -52,13 +51,7 @@ set ruler
 set incsearch
 set ignorecase
 
-"----- Normal mode support
-"      \v edit $MYVIMRC
-"      \s source Current buffer TODO: Source only when &filetype==vim
-map <Leader>v :n $MYVIMRC<CR>
-nmap <Leader>s :source %<CR>
-
-" CTRL-` cause show buffers in normal mode
+" TAB to show buffers in normal mode
 nmap <TAB> :ls<CR>
 
 "--- Insert mode keymap
