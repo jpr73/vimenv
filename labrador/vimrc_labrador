@@ -92,20 +92,22 @@ autocmd Filetype * :call Set_filetype()
 "----- Syntax
 syntax on
 
-"TODO: Tu pokracuj
+"----- Just an example of syntax highlight
 syntax match patt_abc "abc"
 highlight patt_abc guibg=yellow
 
 "--- Additional syntax highlight 
 " TODO: The highlight for tabs and trailing white space does not work for comments,
 " because the comment pattern takes more chars than tab. See :h syn-arguments
-function! Usr_Highlight ()
+function Usr_Highlight ()
   syntax match tabs "\t\+"
   highlight tabs guibg=#202020 ctermbg=darkgray
 
   syntax match trailing_space " \+$"
   highlight trailing_space guibg=#202020 ctermbg=darkgray
 endfunction
+
+"TODO: Tu pokracuj, proc je nutne volat autocmd a nestaci syntax a highlight?
 
 "autocmd Syntax *.vhd,*.v,*.p[lm],*.vim,.vimrc,*.log :call Usr_Highlight()
 "TODO: Fix this for various file types only
