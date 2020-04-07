@@ -107,11 +107,11 @@ function Usr_Highlight ()
   highlight trailing_space guibg=#202020 ctermbg=darkgray
 endfunction
 
-"TODO: Tu pokracuj, proc je nutne volat autocmd a nestaci syntax a highlight?
-
 "autocmd Syntax *.vhd,*.v,*.p[lm],*.vim,.vimrc,*.log :call Usr_Highlight()
 "TODO: Fix this for various file types only
 autocmd Syntax * :call Usr_Highlight()
+
+"TODO: Tu pokracuj
 
 "--- Make taglist.vim working
 filetype on
