@@ -111,10 +111,5 @@ endfunction
 "TODO: Fix this for various file types only
 autocmd Syntax * :call Usr_Highlight()
 
-"--- Make taglist.vim working
-filetype on
-nnoremap <silent> <F8> :TlistToggle<CR>
-let g:tlist_vhdl_settings   = 'vhdl;d:package declarations;b:package bodies;e:entities;a:architecture specifications;t:type declarations;p:processes;f:functions;r:procedures;c:constant declaration'
-
 " File reviewed and updated Apr 8 2020.
 "------------------------------------------------------------------------------
