@@ -14,6 +14,8 @@ References:
   <https://devhints.io/vimscript>
   <https://developer.ibm.com/articles/l-vim-script-1/>
 
+* Vim related:
+  <https://shapeshed.com/vim-packages/>
 * Check this for inspiration:
     <https://github.com/amix/vimrc>
 
