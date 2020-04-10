@@ -1,0 +1,6 @@
+[submodule "external/nerdtree"]
+	path = external/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "external/vim-lucius"]
+	path = external/vim-lucius
+	url = https://github.com/jonathanfilip/vim-lucius.git

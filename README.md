@@ -5,7 +5,7 @@ TODO:
 =====
 * Clean-up ./labrador/vimrc_labrador -> Completed Apr 8 2020.
 * Install at Labrador necessary scripts:
-    Lucius, Nerdtree, OrgMode.
+    OrgMode.
 
 References:
 ===========

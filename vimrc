@@ -20,7 +20,8 @@ filetype indent on
 " Tried at several modern terminals and t_Co was set to 256.
 " In case of need, uncomment.
 "set t_Co=256
-colorscheme darkblue
+colorscheme lucius
+LuciusDarkHighContrast
 
 if has('gui_running')
   "----- GUI setup
@@ -70,16 +71,16 @@ endfunction
 function Set_filetype()
   if &filetype=="vhdl"
     call Set_tab(2)
-    setlocal dictionary=~/vimenv/labrador/vhdl_keywords
+    setlocal dictionary=$HOME/vimenv/dict/vhdl_keywords
 
   elseif &filetype=="verilog"
     call Set_tab(2)
-    setlocal dictionary=~/vimenv/labrador/verilog_keywords
+    setlocal dictionary=$HOME/vimenv/dict/verilog_keywords
 
   elseif &filetype=="python"
     call Set_tab(4)
-    setlocal dictionary=~/vimenv/labrador/python_keywords,
-                       \~/vimenv/labrador/python_exceptions
+    setlocal dictionary=$HOME/vimenv/dict/python_keywords,
+                       \$HOME/vimenv/dict/python_exceptions
 
   else
     call Set_tab(2)
