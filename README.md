@@ -1,8 +1,8 @@
 This is the VimEnv (VIM Environment).
 Started at 27. Feb 2020.
 
-TODO:
-=====
+TODO
+====
 * Clean-up ./labrador/vimrc_labrador -> Completed Apr 8 2020.
 * Update at Win PC. -> Completed ar Apr 11 2020.
 * Update work Linux
@@ -11,25 +11,28 @@ Install
 =======
 
 1. Clone git repos
-  Go to $HOME
-  git clone https://github.com/jpr73/vimenv.git
-  cd vimenv
-  git submodule init
-  git submodule update
+*  Go to $HOME
+*  git clone https://github.com/jpr73/vimenv.git
+*  cd vimenv
+*  git submodule init
+*  git submodule update
 
 Linux:
-  TODO
+*  cd
+*  mkdir -p .vim/pack/vimenv_external
+*  ln -s vimenv/external .vim/pack/vimenv_external/start
+*  ln -s vimenv/vimrc .vimrc
 
 Windows:
-  Make links as Administrator if does not work normally
-  Go to $HOME
-  Create dir vimfiles\pack\vimenv_external and go there.
-  mklink /D start "Full path to $HOME"\vimenv\external
-  Go to $HOME
-  mklink _vimrc vimenv\vimrc
+*  Make links as Administrator if does not work normally
+*  Go to $HOME
+*  Create dir vimfiles\pack\vimenv_external and go there.
+*  mklink /D start "Full path to $HOME"\vimenv\external
+*  Go to $HOME
+*  mklink _vimrc vimenv\vimrc
 
-References:
-===========
+References
+==========
 VIM Scripting:
 *  <https://learnvimscriptthehardway.stevelosh.com>
 *  <https://devhints.io/vimscript>
@@ -42,8 +45,8 @@ Vim related:
 Check this for inspiration:
 *  <https://github.com/amix/vimrc>
 
-Scripts used at Labrador:
-=========================
+Scripts used at Labrador
+========================
  * 256-grayvim : Blue & gray 256 colorscheme
     <https://www.vim.org/scripts/script.php?script_id=3062>
 
