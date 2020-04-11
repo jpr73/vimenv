@@ -5,6 +5,7 @@ TODO:
 =====
 * Clean-up ./labrador/vimrc_labrador -> Completed Apr 8 2020.
 * Update at Win PC. -> Completed ar Apr 11 2020.
+* Update work Linux
 
 Install
 =======
@@ -29,16 +30,17 @@ Windows:
 
 References:
 ===========
-* VIM Scripting:
-  <https://learnvimscriptthehardway.stevelosh.com>
-  <https://devhints.io/vimscript>
-  <https://developer.ibm.com/articles/l-vim-script-1/>
+VIM Scripting:
+*  <https://learnvimscriptthehardway.stevelosh.com>
+*  <https://devhints.io/vimscript>
+*  <https://developer.ibm.com/articles/l-vim-script-1/>
 
-* Vim related:
-  <https://shapeshed.com/vim-packages/>
-  <https://www.root.cz/clanky/plugin-vim-orgmode-portace-popularniho-orgmode-do-vimu/>
-* Check this for inspiration:
-    <https://github.com/amix/vimrc>
+Vim related:
+*  <https://shapeshed.com/vim-packages/>
+*  <https://www.root.cz/clanky/plugin-vim-orgmode-portace-popularniho-orgmode-do-vimu/>
+
+Check this for inspiration:
+*  <https://github.com/amix/vimrc>
 
 Scripts used at Labrador:
 =========================
