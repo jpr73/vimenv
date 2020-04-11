@@ -117,5 +117,9 @@ endfunction
 "TODO: Fix this for various file types only
 autocmd Syntax * :call Usr_Highlight()
 
+"----- For vim-orgmode plugin operation for some reason
+" detection, plugin, indent need to be ON.
+filetype plugin indent on
+
 " File reviewed and updated Apr 8 2020.
 "------------------------------------------------------------------------------
