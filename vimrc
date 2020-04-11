@@ -25,10 +25,9 @@ LuciusDarkHighContrast
 
 if has('gui_running')
   "----- GUI setup
-  colorscheme desert
-  set lines=43 columns=100
+  set lines=68 columns=100
   if has("win32")
-    set guifont=Lucida_Console:h9:cDEFAULT
+    set guifont=Lucida_Console:h10:cDEFAULT
   endif
 else
 
@@ -43,6 +42,12 @@ set ruler
 "----- Search setup
 set incsearch
 set ignorecase
+set hlsearch
+
+"----- Backspace on Win
+if has("win32")
+  set backspace=indent,eol,start
+endif
 
 " TAB to show buffers in normal mode
 nmap <TAB> :ls<CR>

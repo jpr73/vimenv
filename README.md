@@ -4,7 +4,37 @@ Started at 27. Feb 2020.
 TODO:
 =====
 * Clean-up ./labrador/vimrc_labrador -> Completed Apr 8 2020.
-* Update at Win PC.
+* Update at Win PC. -> Completed ar Apr 11 2020.
+
+Install
+=======
+
+Clone git repos
+  Go to $HOME
+
+  git clone https://github.com/jpr73/vimenv.git
+
+  cd vimenv
+
+  git submodule init
+
+  git submodule update
+
+Linux:
+  TODO
+
+Windows:
+  Make links as Administrator if does not work normally
+
+  Go to $HOME
+
+  Create dir vimfiles\pack\vimenv_external and go there.
+
+  mklink /D start "Full path to $HOME"\vimenv\external
+
+  Go to $HOME
+
+  mklink _vimrc vimenv\vimrc
 
 References:
 ===========
