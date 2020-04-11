@@ -9,15 +9,11 @@ TODO:
 Install
 =======
 
-Clone git repos
+1. Clone git repos
   Go to $HOME
-
   git clone https://github.com/jpr73/vimenv.git
-
   cd vimenv
-
   git submodule init
-
   git submodule update
 
 Linux:
@@ -25,15 +21,10 @@ Linux:
 
 Windows:
   Make links as Administrator if does not work normally
-
   Go to $HOME
-
   Create dir vimfiles\pack\vimenv_external and go there.
-
   mklink /D start "Full path to $HOME"\vimenv\external
-
   Go to $HOME
-
   mklink _vimrc vimenv\vimrc
 
 References:
