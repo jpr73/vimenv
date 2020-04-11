@@ -4,3 +4,12 @@
 [submodule "external/vim-lucius"]
 	path = external/vim-lucius
 	url = https://github.com/jonathanfilip/vim-lucius.git
+[submodule "external/vim-orgmode"]
+	path = external/vim-orgmode
+	url = https://github.com/jceb/vim-orgmode.git
+[submodule "external/vim-speeddating"]
+	path = external/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating.git
+[submodule "external/calendar-vim"]
+	path = external/calendar-vim
+	url = https://github.com/mattn/calendar-vim.git

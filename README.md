@@ -4,8 +4,7 @@ Started at 27. Feb 2020.
 TODO:
 =====
 * Clean-up ./labrador/vimrc_labrador -> Completed Apr 8 2020.
-* Install at Labrador necessary scripts:
-    OrgMode.
+* Update at Win PC.
 
 References:
 ===========
@@ -16,6 +15,7 @@ References:
 
 * Vim related:
   <https://shapeshed.com/vim-packages/>
+  <https://www.root.cz/clanky/plugin-vim-orgmode-portace-popularniho-orgmode-do-vimu/>
 * Check this for inspiration:
     <https://github.com/amix/vimrc>
 
