@@ -65,5 +65,25 @@ Scripts used in the past
  * SystemVerilog indent and syntax scripts
     <https://github.com/nachumk/systemverilog.vim>
 
+ * A Vim plugin for visually displaying indent levels in code
+    <https://github.com/nathanaelkane/vim-indent-guides>
+
+ * Vim Markdown
+    <https://github.com/plasticboy/vim-markdown>
+
+*Used for snippets*
+ * SnipMate aims to provide support for textual snippets, similar to TextMate ...
+    <https://github.com/garbas/vim-snipmate>
+
  * This library provides some utility functions...
+     Used by vim-snipmate plugin.
     <https://github.com/tomtom/tlib_vim>
+
+ * Various utils such as caching interpreted contents of files or advanced glob like things
+     Used by vim-snipmate plugin.
+    <https://github.com/MarcWeber/vim-addon-mw-utils>
+
+ * snipMate & UltiSnip Snippets
+     Uses vim-snipmate
+     <https://github.com/honza/vim-snippets>
+
