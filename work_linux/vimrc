@@ -1,0 +1,93 @@
+"-------------------------------------------------------------------------------
+"
+" Filename:     vimrc
+" Description:  VIM/GVIM user setup file. Should be renamed to .vimrc and saved
+"               as in ~/.vimrc. Simlinks can be used.
+"
+"-------------------------------------------------------------------------------
+"
+" TODO: 
+"   None
+"
+"-------------------------------------------------------------------------------
+
+"----- Use Pathogen VIM script manager
+execute pathogen#infect()
+
+"----- Show line numbers
+set number
+
+"----- Set indentation without hard tabs
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set autoindent
+
+"----- Colors
+set t_Co=256
+colorscheme lucius
+LuciusDark
+"colorscheme desert
+
+"----- GUI setup
+if has('gui_running')
+  "colorscheme darkblue
+  set lines=68 columns=100
+  if has("win32")
+    set guifont=Lucida_Console:h9:cDEFAULT
+  else
+    "set guifont=LucidaTypewriter\ 12
+  endif
+
+"----- CLI setup
+else
+  set mouse=a
+  set ttymouse=xterm2
+endif
+
+"--- Status line
+set showmode
+set showcmd
+set ruler
+
+"----- Search setup
+set incsearch
+set ignorecase
+set hlsearch
+
+"----- CTRL-` cause show buffers in normal mode
+nmap <TAB> :ls<CR>
+
+"----- Set wildmenu for options
+set wildmenu
+
+"----- Syntax
+syntax on
+
+"----- Backspace on Win
+set backspace=indent,eol,start
+
+"--- Additional syntax highlight 
+" TODO: The highlight for tabs and trailing white space does not work for comments,
+" because the comment pattern takes more chars than tab. See :h syn-arguments
+function! Usr_Highlight ()
+  syntax match tabs "\t\+"
+  highlight tabs guibg=#202020 ctermbg=darkgray
+
+  syntax match trailing_space " \+$"
+  highlight trailing_space guibg=#202020 ctermbg=darkgray
+endfunction
+
+"autocmd Syntax *.vhd,*.v,*.p[lm],*.vim,.vimrc,*.log :call Usr_Highlight()
+"TODO: Fix this for various file types only
+autocmd Syntax * :call Usr_Highlight()
+
+"----- Support to PRACTICE language (*.cmm extension)
+"  4/20/2018: J.Priskin
+"  Used for Lauterbach CPU debugger for RDR-7000 program.  VIM did not
+"  recognized the file and I did not search for FT Plugin.  The closest
+"  is assmebler, thus I set that.
+" 
+autocmd BufNewFile,BufRead *.cmm set filetype=asm
+
+"------------------------------------------------------------------------------

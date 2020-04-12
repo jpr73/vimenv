@@ -1,0 +1,42 @@
+# VHDL snippets
+
+#----------------------------------------------------------------------
+#
+# TEST STUFF HERE
+#
+snippet std
+	std_logic
+
+snippet std_logic
+	std_logic_vector
+
+snippet test1
+	AAA
+		BBB=${1:value1}
+		CCC=${2:value2}
+		Mirror1:$1
+		Mirror and replace a to b: ${3/a/b/g}
+	XXX
+
+snippet file
+	`Filename()`
+	
+snippet --
+	--=============================================
+	-- $0
+	--=============================================
+#----------------------------------------------------------------------
+
+# Entity
+snippet entity
+	entity ${1:entity_name} is
+		port (
+		);
+	end $1;
+
+# Architecture
+snippet architecture
+	architecture ${2:rtl} of ${1:entity_name} is 
+	
+	begin
+	end $2;

@@ -4,8 +4,9 @@ Started at 27. Feb 2020.
 TODO
 ====
 * Clean-up ./labrador/vimrc_labrador -> Completed Apr 8 2020.
-* Update at Win PC. -> Completed ar Apr 11 2020.
-* Update work Linux
+* Update at Win PC. -> Completed at Apr 11 2020.
+* Update work Linux -> Completed at Apr 12 2020.
+* Diff ./vimrc and ./work_linux/vimrc
 
 Install
 =======
@@ -20,7 +21,7 @@ Install
 Linux:
 *  cd
 *  mkdir -p .vim/pack/vimenv_external
-*  ln -s vimenv/external .vim/pack/vimenv_external/start
+*  ln -s ~/vimenv/external .vim/pack/vimenv_external/start
 *  ln -s vimenv/vimrc .vimrc
 
 Windows:
