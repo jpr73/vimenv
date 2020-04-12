@@ -45,13 +45,10 @@ Vim related:
 Check this for inspiration:
 *  <https://github.com/amix/vimrc>
 
-Scripts used at Labrador
+Scripts used in the past
 ========================
  * 256-grayvim : Blue & gray 256 colorscheme
     <https://www.vim.org/scripts/script.php?script_id=3062>
-
- * Lucius : Light and dark color scheme for GUI and 256 color terminal.
-    <https://www.vim.org/scripts/script.php?script_id=2536>
 
  * taglist.vim : Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
     <https://www.vim.org/scripts/script.php?script_id=273>
@@ -64,3 +61,9 @@ Scripts used at Labrador
 
  * comments.vim : To Comment/Un-Comment single/multiple lines of code for different source files
     <https://www.vim.org/scripts/script.php?script_id=1528>
+
+ * SystemVerilog indent and syntax scripts
+    <https://github.com/nachumk/systemverilog.vim>
+
+ * This library provides some utility functions...
+    <https://github.com/tomtom/tlib_vim>
