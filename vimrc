@@ -33,10 +33,12 @@ else
 
   "----- CLI setup
   set mouse=a
+  set ttymouse=sgr
 endif
 
 "--- Status line
 set showmode
+set showcmd
 set ruler
 
 "----- Search setup
@@ -44,10 +46,8 @@ set incsearch
 set ignorecase
 set hlsearch
 
-"----- Backspace on Win
-if has("win32")
-  set backspace=indent,eol,start
-endif
+"----- Backspace
+set backspace=indent,eol,start
 
 " TAB to show buffers in normal mode
 nmap <TAB> :ls<CR>
