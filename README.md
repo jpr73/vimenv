@@ -7,7 +7,7 @@ TODO
 * Update at Win PC. -> Completed at Apr 11 2020.
 * Update work Linux -> Completed at Apr 12 2020.
 * Diff ./vimrc and ./work_linux/vimrc -> Completed Apr 13 2020.
-* Move work linux vim cheat sheet to vim_cheat_sheet.md.
+* Move work linux vim cheat sheet to vim_cheat_sheet.md. -> Completed Apr 14 2020.
 
 Install
 =======

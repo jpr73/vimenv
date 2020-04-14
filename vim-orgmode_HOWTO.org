@@ -1,0 +1,63 @@
+------------------------------------------------------------------------------
+For help see:  ~/vimenv/external/vim-orgmode/doc/orgguide.txt
+------------------------------------------------------------------------------
+Inline markup
+
+  *bold*
+  /italic/
+  _undeline_
+
+------------------------------------------------------------------------------
+Headings
+
+  *   1st level
+  **  2nd level
+  *** 3rd level
+
+------------------------------------------------------------------------------
+Basics
+
+ <CR>       Enter new heading of the same level
+ <Tab>      Visibility cycling
+ <S-Tab>
+ }          Next heading.
+ {          Previous heading.
+ ]]         Next heading same level.
+ [[         Previous heading same level.
+
+------------------------------------------------------------------------------
+Date
+ \sa        Prompt for a date and insert a corresponding
+            timestamp.
+ <C-A>      Increment year, month, day
+ <C-X>      Decrement year, month, day
+
+------------------------------------------------------------------------------
+Tags:
+  \st   - Set tag
+  \ft   - Find tag
+------------------------------------------------------------------------------
+Using TODO states
+
+  <S-right> or <S-left> Select the following/preceding TODO state, similar to
+                        cycling.
+
+       ,-> (unmarked) -> TODO -> DONE --.
+       '--------------------------------'
+
+------------------------------------------------------------------------------
+Structure editing
+  <<        Promote current heading by one level.
+  >>        Demote current heading by one level.
+
+  <[[       Promote the current subtree by one level
+  >]]       Demote the current subtree by one level.
+
+  m{        Move heading up (swap with previous/next subtree of same level).
+  m}        Move heading down (swap with previous/next subtree of same level).
+
+  m[[       Move subtree up (swap with previous/next subtree of same level).
+  m]]       Move subtree down (swap with previous/next subtree of same level).
+
+------------------------------------------------------------------------------
+

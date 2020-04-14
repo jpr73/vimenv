@@ -1,0 +1,73 @@
+-------------------------------------------------------------------------------
+VIM Completion in insert mode:
+
+  CTRL-N:   Complete based on NEXT word
+  CTRL-P:   Complete based on PREVious word
+  CTRL-X:   Enters completion sub-mode (more see :help ins-completion)
+
+-------------------------------------------------------------------------------
+VIM MATCH:
+
+:hi match1 ctermbg=DarkBlue
+:hi match2 ctermbg=DarkGreen
+:hi match3 ctermbg=DarkRed
+
+:match match1  /Pattern1/
+:2match match2 /Pattern2/
+:3match match3 /Pattern3/
+
+-------------------------------------------------------------------------------
+VIM REGEX:
+
+VIM        Rest of       Meaning
+           the world
+................................................................................
+^          ^             First non white char at the line
+\r         \n            New line for replacement
+                           E.g. :%s/,/\r/gc
+\S\+       \S+           One or more none white char(s)
+\s\+       \s+           One or more white char(s)
+\(\S+\)    (\S+)         One or more none white char(s) - add it to variable
+                           for replacement
+
+Other sources: http://vimregex.com
+-------------------------------------------------------------------------------
+VIMDIFF:
+
+  Use "vimdiff -R <f1> <f2>" to open vimdiff in read-only mode
+
+  ]c Go to next change
+  [c Go to prev. change
+
+  Folding:
+    zo Unfold (zzz open)
+    zc Fold (zzz close)
+    zR Remove all folds
+    zM Fold Most
+
+-------------------------------------------------------------------------------
+Split windows resize:
+  CTRL-w =                          Split windows to equal size
+  :resize 60                        Set height to 60 lines
+  :res +5                           Increase height by 5 lines
+  :res -5                           Decrease height by 5 lines
+  :vertical resize 60 / +5 / -5     Same but width, instead of height
+-------------------------------------------------------------------------------
+Open file under the cursor:
+  gf                                In the same window
+  CTRL-w f                          In splitted window - vertically
+  CTRL-w v                          Split window horizontally
+  CTRL-w v gf                       In splitted window - horizontally
+
+-------------------------------------------------------------------------------
+Spell check:
+  :set spell    Enables highlight
+  ]s            Jumps to the next misspelled word.
+  z=            Show completion options.
+-------------------------------------------------------------------------------
+* DiffOrig - Diff the current buffer
+Diff the file since it was loaded, i.e. track changes of the file as
+edited. Copied from VIM help ':help vimdiff'
+`command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_`
+`	\ | diffthis | wincmd p | diffthis`
+-------------------------------------------------------------------------------
