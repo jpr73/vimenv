@@ -33,6 +33,14 @@ Windows:
 *  Go to $HOME
 *  mklink _vimrc vimenv\vimrc
 
+Snippets
+========
+I use UltiSnips <https://github.com/SirVer/ultisnips> as an engine.  It requires Python, which is not an issue.  For inspiration of snippets I checked vim-snippets <https://github.com/honza/vim-snippets>.  Based on the documentation, these snippets should be compatible with vim-snipmate <https://github.com/honza/vim-snippets>.
+
+To add new snippets for given ft (Vim filetype), open a file of that filetype and call :UltiSnipsEdit command.  That opens the snippets for that ft.  In case of no ft is set, then all.snippets is called.
+
+Snippets are stored in vimenv/UltiSnips directory.
+
 References
 ==========
 VIM Scripting:
@@ -43,6 +51,7 @@ VIM Scripting:
 Vim related:
 *  <https://shapeshed.com/vim-packages/>
 *  <https://www.root.cz/clanky/plugin-vim-orgmode-portace-popularniho-orgmode-do-vimu/>
+*  <http://vimcasts.org/>
 
 Check this for inspiration:
 *  <https://github.com/amix/vimrc>

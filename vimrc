@@ -121,5 +121,12 @@ autocmd Syntax * :call Usr_Highlight()
 " detection, plugin, indent need to be ON.
 filetype plugin indent on
 
+"----- UltiSnip config
+let g:UltiSnipsSnippetDirectories=[$HOME.'/vimenv/UltiSnips']
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
 " File reviewed and updated Apr 8 2020.
 "------------------------------------------------------------------------------

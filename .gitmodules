@@ -13,3 +13,6 @@
 [submodule "external/calendar-vim"]
 	path = external/calendar-vim
 	url = https://github.com/mattn/calendar-vim.git
+[submodule "external/ultisnips"]
+	path = external/ultisnips
+	url = https://github.com/SirVer/ultisnips
