@@ -1,7 +1,12 @@
+# VHDL snippets
+# J.Priskin May 2020
+#
+# Use ideally to chars snippet trigger.
+
 snippet --
---==============================
+--=============================================
 -- $0
---==============================
+--=============================================
 endsnippet
 
 snippet st
@@ -21,4 +26,27 @@ entity $1 is
 
   );
 end entity $1;
+endsnippet
+
+# Sequential process
+snippet sp
+${1:seq_P}: process (${2:CLK}, ${3:RST_N})
+  begin
+    -- Reset event
+    if not $3 then
+      $0
+    -- Clock Event
+    elsif rising_edge($2) then
+      
+    end if; -- Clock event
+  end process $1;
+endsnippet
+
+# Combo process
+snippet cp
+${1:combo_P}: process (${2:address})
+  begin
+    -- Default assignments
+    $0
+  end process $1;
 endsnippet
